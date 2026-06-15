@@ -14,11 +14,19 @@
             this.attachShadow({mode:'open'});
         }
         connectedCallback(){
-            const saveColor=localStorage.getItem('color','#000000')
+            const saveColor=localStorage.getItem('color') || '#000000'; //取得之前儲存的顏色
+                this.shadowRoot.innerHTML=`
+                <input type="color" value="${saveColor}">
+                `;
+            this.shadowRoot.querySelector('input');
+            addEventListener('input',(e)=>{localStorage.setItem('color',e.target.value);
+
+            })            
         }
 
     }
 
+    customElements.define('color-picker',pickerColor);
 </script>
 
 </body>
