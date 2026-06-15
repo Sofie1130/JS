@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 宣告變數
+        var name='';
+        var height=0.0;
+        var weight=0.0;
+        var gender='';
+        var marriage='';
+
+        name='李貴信';
+        height=178.8;
+        weight=60.5;
+        gender='男';
+        marriage='true';
+
+        //object物件類型
+
+        let emp={
+            no:1,
+            name:'李似水',
+            h:160.5,
+            w:55.2,
+            gender:'女',
+            marriage:false
+        };
+
+        document.write("<h1>BSNET員工健康關懷系統</h1>")
+        document.write("<hr>");
+        document.write("姓名："+name+"<br>");
+        document.write("身高："+height+"公分<br>");
+        document.write("體重："+weight+"公斤<br>");
+        document.write("性別："+gender+"<br>");
+        document.write("婚姻："+marriage+"<br>");
+        
+        // document.write("<hr>");
+        // document.write("編號："+emp.no+"<br>");
+        // document.write("姓名："+emp.name+"<br>");
+        // document.write("身高："+emp.h+"公分<br>");
+        // document.write("體重："+emp.w+"公斤<br>");
+        // document.write("性別："+emp.gender+"<br>");
+        // document.write("婚姻："+emp.marriage+"<br>");
+       
+    //直觀性文字敘述    
+    document.write(`
+    <hr>
+    編號：${emp.no}<br>
+    姓名：${emp.name}<br>
+    身高：${emp.h}公分<br>
+    體重：${emp.w}公斤<br>
+    性別：${emp.gender}<br>
+    婚姻：${emp.marriage}<br>
+            `); 
+
+//善後動作：把變數 emp 清空，不再指向原本的物件，「垃圾回收機制（Garbage Collection）」。當物件沒有人使用時：系統之後可能會自動回收記憶體
+        emp=null;
+
+        document.write("----The End----");
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+
+<!-- 宣示HTML 文件,文件依照HTML 5 標準-->
+<!DOCTYPE html>
+
+<!--指定HTML 的語言屬性, 告訴瀏覽器該網頁的主要語言-->
+<html lang="zh-tw">
+<head>
+
+    <meta charset="UTF-8"> <!--設定字元編碼-->
+
+    <!--用於設定網頁的視埠,告訴瀏覽如何初始化和渲染(render) 頁面 -->
+    <!-- width=device-width ,視埠的寛度等於該裝置的實際寛度-->
+     <!--initial-scale=1.0 ,表示頁的初始化為1.0,即不進行初始的縮放-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cafe Time</title>
+
+      <!-- CSS,的設定要置於<style></style>標籤之中-->
+    <style>      
+        body{
+            
+            background-color:#880000;
+            color: beige;
+            margin: 0px;
+        }
+
+        header{
+            width: 100%;
+            height: 25vh;
+            background-image:url(images/coffee08.jpg);
+            background-size: cover;
+            display: flex;
+            justify-content: center; /*水平置中*/
+            align-items: center;    /*垂直置中*/
+            
+            /* background-color: green; */    
+            cursor: pointer;   
+            
+        }
+
+        h1{
+            font-size: 5em;
+        }
+
+        main{
+            margin: 3rem;
+        }
+
+        h4{
+            color: aliceblue;
+            background-color: darkgreen;
+            width: 25%;
+            padding: 8px;
+            border-radius: 25px;
+            border: 1px silver solid;
+        }
+
+        p{
+            color: yellow;
+        }
+
+        footer{
+            bottom: 0px;
+            left: 0px;
+            position: fixed;
+            background-color: beige;
+            color: #880000;
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header onclick="alert('嗨,歡迎來到咖啡時光..')">
+        <h1>Welcome to Cafe Time</h1>
+    </header>
+
+    <main>
+        <h3>咖啡的歷史起源</h3>
+        <p style="color: greenyellow;">咖啡的來源已無從稽考。諸多傳說之一指咖啡原產於衣索比亞（Ethiopia）西南部的咖法省高原地區，據說是一位牧羊人發現羊吃了一種植物後，變得非常興奮活潑，因此發現了咖啡。</p>
+
+
+        <h3>咖啡樹的品種</h3>
+
+        <h4>阿拉比卡咖啡(Arabica coffee) </h4>
+        <p>原產於東非伊索比亞南部的阿比西 尼亞高原，現今沿海尚有野生種。</p>
+
+        <h4>羅布斯塔咖啡(Robusta coffee) </h4>
+        <p>羅布斯塔咖啡屬於剛果咖啡的突變 種，原產於西非剛果，本種有缺乏香氣之 憾，苦味較強，酸味不足。</p>
+
+        <h4>利比亞咖啡(Liberia coffee)</h4>
+        <p>原產於西非利比亞，本種香味不佳， 苦味較強。除少數生產國自己消費外，只 有歐洲人飲用利比亞咖啡。</p>
+    </main>
+
+    <footer>
+        2026 版權所有 | 翻拷必究
+    </footer>
+    
+</body>
+</html>

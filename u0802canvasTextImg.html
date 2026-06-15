@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="slogan">SHOW slogan</button>
+    <button id="image">SHOW Image</button><br>
+    <canvas id="txtCanvas" width="500" height="75" >    </canvas><br>
+    <canvas id="imgCanvas" width="500" height="500">    </canvas>
+
+    <script>
+        document.getElementById('slogan').addEventListener('click',function(){
+            const canvas=document.getElementById('txtCanvas');
+            const ctx=canvas.getContext('2d');
+            ctx.font='24px Arial';
+            ctx.fillStyle='pink';
+            ctx.fillText('Have a  good time!',50,50);
+        });
+
+           document.getElementById('image').addEventListener('click',function(){
+            const canvas=document.getElementById('imgCanvas');
+            const ctx=canvas.getContext('2d');
+            const img=new Image();
+            img.onload=()=>{
+                ctx.drawImage(img,0,0,500,500);
+            }
+            img.src='images/drink/3.jpg';
+        });
+
+    </script>
+
+</body>
+</html>

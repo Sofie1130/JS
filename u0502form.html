@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js and form</title>
+</head>
+<body>
+
+    <h1>員工健康管理系統</h1>
+    <hr>
+    <input type="text" placeholder="姓名" id="name"><br>
+    <input type="number" placeholder="身高" id="h"><br>
+    <input type="number" placeholder="體重" id="w"><br>
+    <input type="radio" id="male" name="gender"checked>男
+    <input type="radio" id="female" name="gender">女 <br>
+    <button onclick="standard()">OK</button>
+    <div id="result"></div>
+
+    <script>
+
+        function standard(){
+            let name='';
+            let h=0.0;
+            let w=0.0;
+            let gender='';
+
+            name=document.getElementById('name').value;
+            h=document.getElementById('h').value;
+            w=document.getElementById('w').value;
+
+            document.getElementById('result').innerHTML=`
+                姓名:${name}<br>
+                身高:${h} 公分<br>
+                體重:${w} 公斤<br>
+            `;
+           
+        }
+
+    </script>
+    
+</body>
+</html>

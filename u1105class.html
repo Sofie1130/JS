@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    class person {
+    
+        constructor(name,age){
+        this.name=name;
+        this.age=age;
+    }
+
+        introduce(){
+            console.log(`大家好，我是${this.name}，今年${this.age}歲`);
+        }
+        birthday(){
+            this.age++;
+             console.log(`${this.name}生日快樂，我今年${this.age}歲`);
+
+        }
+  }
+
+        const p1=new person("Sofie",30);
+        p1.introduce();
+        p1.birthday();
+ 
+
+class employee extends person{
+    constructor(name,age,position){
+        super(name,age);
+        this.position=position;
+            }
+    
+            work(){
+                console.log(`${this.name}的職業是${this.position}`);
+            }
+        }
+        const e1=new employee("曾賣命",25,"設備工程師");
+        e1.work();
+        e1.introduce();
+        e1.birthday();
+
+
+</script>
+
+    
+</body>
+</html>

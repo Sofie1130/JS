@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+table{
+    width: 100%;
+    border: 3px solid rgb(240, 17, 121);
+     border-collapse: collapse;
+}
+
+td{
+    border: 1px solid palevioletred;
+   text-align: center;
+    padding: 2em;
+
+}
+
+   </style>
+
+</head>
+<body>
+<h1>99乘法表</h1>
+<hr>
+<p id="result"></p>
+
+    <script>
+        let k=0;
+        document.write("<table>");
+
+        for(let i=1;i<=9;i++){
+            document.write("<tr onmouseover='setTrBg(this)' onmouseout='clearTrBg(this)'>");
+
+            for(let j=1;j<=9;j++){
+                        k=i*j;
+        document.write(`<td onmouseenter='setTdFont(this)' onmouseleave='clearTdFont(this)'>${i}×${j}=${k}</td>`);
+            }
+    document.write("</tr>");
+        }
+document.write("</table>");
+
+
+function setTrBg(obj){
+    obj.style.backgroundColor='Pink';
+}
+
+function clearTrBg(obj){
+    obj.style.backgroundColor='transparent';
+}
+
+function setTdFont(obj){
+    obj.style.color=' #005798';
+    obj.style.cursor='pointer';
+    document.getElementById('result').innerHTML=obj.innerHTML;
+}
+
+function clearTdFont(obj){
+    obj.style.color='inherit';
+   
+}
+
+
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>查看天氣</title>
+</head>
+<body>
+    <input type="text" id="city">
+    <button>查詢</button>
+    <div id="result"></div>
+    
+<script>
+
+async function getWeather() {
+    const city=document.getElementById("city").value;
+    const apikey="8cf0557008cee1a84fa9b557f59da4e4";
+    const url=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}&units=metric&lang=zh_tw`;
+
+    try{
+const response=await fetch(url);
+const data=await response.json();
+if(response.ok){
+
+    
+}
+
+    }
+    
+}
+
+
+</script>
+
+</body>
+</html>

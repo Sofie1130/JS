@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+ div,button{
+            width: 100%;
+            height: 7vh;
+            padding-top: 0.8em;
+            padding-bottom: 0.8em;
+            margin-top:0.8em ;
+            border: 1px gold solid;
+            border-radius: 50px;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.25rem;
+        }
+
+    </style>
+</head>
+<body>
+<h1>函數與事件</h1>
+<hr>
+    <div id="d1">Good morning</div>
+    <div id="d2">Good Afternoon</div>
+    <div id="d3">Good Evening</div>
+    <button id="btn" style="display: none;">STOP</button>
+
+    <script>
+ const d1=document.getElementById('d1');
+ const d2=document.getElementById('d2');
+ const d3=document.getElementById('d3');
+ const btn=document.getElementById('btn');
+
+ d1.onclick=function(){
+    window.alert("早安，早餐已為您準備好嚕！");
+ }
+
+ d1.onmouseover=function(){
+    this.innerHTML="早安啊！";
+    this.style.cursor='pointer';
+    setBg(this);
+ }
+
+  d1.onmouseout=function(){
+    this.innerHTML="Good morning";
+    clearBg(this);
+ }
+
+ d2.addEventListener('click',greeting);
+
+ d2.addEventListener('mouseenter',function(){
+    this.innerHTML="摳妮機挖";
+    this.style.cursor='pointer';
+    setBg(this);
+ });
+ d2.addEventListener('mouseleave',function(){
+    this.innerHTML="Good Afternoon";
+        clearBg(this);
+ });
+
+ d3.addEventListener('mouseover',function(){
+    this.style.fontSize='3em';
+    this.style.cursor='pointer'; 
+    btn.style.display='block';   
+ });
+
+ d3.addEventListener('mousemove',getNumber);
+
+ btn.addEventListener('click',removeEL);
+
+
+function setBg(obj){
+    obj.style.backgroundColor='Pink';
+}
+
+function clearBg(obj){
+    obj.style.backgroundColor='transparent';
+}
+
+function greeting(){
+   window.alert("摳妮機挖");
+}
+
+function getNumber(){
+    let num=Math.floor(Math.random()*49)+1;
+    d3.innerHTML=num;
+    
+}
+
+function removeEL(){
+    d3.removeEventListener('mousemove',getNumber);
+    window.alert('停止產生號碼');
+}
+
+
+
+    </script>
+    
+</body>
+</html>

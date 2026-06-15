@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<div id="demo1"> </div>
+<div id="demo2"> </div>
+<div id="demo3"> </div>
+<div id="demo4"> </div>
+
+<script>
+
+   const d1= document.getElementById('demo1');
+   const d2= document.getElementById('demo2');
+   const d3= document.getElementById('demo3');
+   const d4= document.getElementById('demo4');
+   
+    let myfun=()=>{d1.innerHTML="您好嘛！"}
+    myfun();   
+
+    let yourfun=(name,coffee)=>{d2.innerHTML=`${name}您愛的咖啡是${coffee}`}
+    yourfun('Amy','Latte');  
+
+    let hisfun=()=>d2.innerHTML=`${name}您愛的咖啡是${coffee}`}
+    yourfun('Amy','Latte');  
+
+
+
+
+
+
+
+
+
+
+
+   </script>
+
+
+</body>
+</html>

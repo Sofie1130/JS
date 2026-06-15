@@ -1,0 +1,66 @@
+body{
+            background-color: #613030	;
+            color: azure;
+            margin: 0px;
+        }
+        header{
+            width: 100%;
+            height: 25vh;
+            /*background-color:#796400 ;*/
+            color:#A67B5B;
+            background-image: url(images/coffee09.png);
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+        h1{ 
+           font-size: 8rem; 
+        }
+        main{
+            margin: 3rem;
+        }
+        footer{
+          bottom: 0px;
+          left: 0px;
+          position: fixed;
+          background-color: #616130;
+          color: 	#B3D9D9;
+          width: 100%;
+          text-align: center;
+                  }
+        p{
+        color: #D6D6AD;
+        }
+
+        h4{
+            background-color: rgb(204, 241, 229);
+            color: rgb(1, 51, 51);
+            width: 18%;
+            padding: 18px;
+            border-radius: 30px;
+            border: 1px rgb(242, 242, 245) solid;
+        }
+
+        #b1{
+            background-color: #616130;
+            color: aliceblue;
+        }
+
+        .myimg{
+            width: 10%;
+            border: 1px rgb(82, 36, 3) solid;
+            border-radius: 250px;
+            background-color: rgb(207, 200, 200);
+
+        }
+        h4:hover{
+            background-color: #613030;
+            color: aliceblue;
+            cursor: pointer;
+        }
+
+        P::before{
+            content: '☕ ';
+        }

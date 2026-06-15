@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="放鬆咖啡館">
+    <meta name="keywords" content="咖啡 手作甜點 下午茶 聚餐 寫作 文案 靈感">
+
+
+    <title>Document</title>
+    <style>
+ 
+    /*  *號為萬用字元，代表版面的BOX要往內擴，才不會壞版 */
+    *{box-sizing: border-box;} 
+body{
+            background-color: #74373777	;
+            color: azure;
+            margin: 0px;
+        }
+    
+    /*
+        header{
+            width: 100%;
+            height: 25vh;
+                      color: rgba(104, 3, 3, 0.747);
+            background-image: url(images/coffee09.png);
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+        h1{ 
+            font-size: 8rem; 
+                    }  
+*/
+        h3{ 
+           color: #882701; 
+                    }
+
+         header{
+           position: relative;
+           width: 100%;
+           height: 35vh;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           cursor: pointer;
+        }
+
+         header h1{
+            position: relative;
+            z-index: 1;
+            color: rgba(255, 213, 205, 0.788);
+            font-size: 6em;
+            text-align: center;  
+            text-shadow: 0px 3px 10px rgba(0, 0, 0, 0.5);
+        }
+            
+        header img{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: brightness(50%);            
+        }
+
+       
+  
+
+        nav{
+            background-color: rgba(104, 3, 3, 0.747);
+        }
+        
+        nav ul{
+            list-style-type: none;
+            margin: 0px;
+            display: inline-flex;
+        }
+        
+        nav li{
+            padding: 1.2vw;
+        }
+
+        nav li:hover{
+            background-color: rgba(170, 61, 61, 0.767);
+        }
+
+        nav a{
+            color: beige;
+            text-decoration: none;
+        }
+
+
+
+    aside ul{
+            list-style-type: none;
+            margin: 0px;
+           
+        }
+        
+        aside li{
+            margin: 8px;
+            padding: 8px;
+            border-bottom: #50360e 1px solid;
+        }
+
+        aside li:hover{
+            background-color: rgba(170, 61, 61, 0.767);
+                   }
+
+        aside a{
+            color: rgb(107, 35, 6);
+            text-decoration: none;
+        }
+
+        aside iframe{
+            border-radius: 8px;
+        }
+    iframe{ 
+        width: 100%;
+        height: 45vh;
+        border: none;
+        overflow: auto;
+        
+        }
+
+    img{
+            width: 100%;
+        }
+
+
+        /*要注意類別的名字大小寫有差*/
+    [class *='col-']{
+        width: 100%;
+        float: left;
+        padding: 1.5vw;
+    }
+
+
+     /*tablet*/
+        @media only screen and (min-width:992px){
+            .col-m-1{width: 8.33%;}
+            .col-m-2{width: 16.67%;}
+            .col-m-3{width: 25.00%;}
+            .col-m-4{width: 33.33%;}
+            .col-m-5{width: 41.67%;}
+            .col-m-6{width: 50.00%;}
+            .col-m-7{width: 58.33%;}
+            .col-m-8{width: 66.67%;}
+            .col-m-9{width: 75.00%;}
+            .col-m-10{width: 83.33%;}
+            .col-m-11{width: 91.67%;}
+            .col-m-12{width: 100.0%;}            
+        }
+
+        /*pc*/
+        @media only screen and (min-width:1200px){
+            .col-1{width: 8.33%;}
+            .col-2{width: 16.67%;}
+            .col-3{width: 25.00%;}
+            .col-4{width: 33.33%;}
+            .col-5{width: 41.67%;}
+            .col-6{width: 50.00%;}
+            .col-7{width: 58.33%;}
+            .col-8{width: 66.67%;}
+            .col-9{width: 75.00%;}
+            .col-10{width: 83.33%;}
+            .col-11{width: 91.67%;}
+            .col-12{width: 100.0%;}            
+        }
+footer{
+          bottom: 0px;
+          left: 0px;
+          position: fixed;
+          background-color: rgba(104, 3, 3, 0.747);
+          color: 	#B3D9D9;
+          width: 100%;
+          text-align: center;
+                  }
+
+    </style>
+</head>
+<body>
+    <nav>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Product News</a></li>
+        <li><a href="#">Contact us</a></li>
+
+    </ul>    
+    </nav>
+    
+    <header>
+        <img src="images/coffee09.png" id="bean" alt="一品咖啡豆享受咖啡好時光">
+        <h1>Welcome To Cafe Shop</h1></header>
+    <main>
+    <aside class="col-2 col-m-4">
+        <ul>
+        <li><a href="u0302coffee.html" target="mycoffee">咖啡的歷史起源</a></li>
+        <li><a href="u0303coffee.html" target="mycoffee">咖啡樹的品種</a></li>
+        <li><a href="u0304coffee.html" target="mycoffee">咖啡的栽培條件</a></li>
+        <li><a href="u0305coffee.html" target="mycoffee">咖啡豆的成分</a></li>
+        </ul>
+        <audio controls="" style="width: 100%; border-radius: 8px;"><source src="sounds/baha.mp3" type="audio/mp3"></audio>
+     <hr>
+        <video controls=""style="width: 100%; border-radius: 8px;"><source src="videos/coffee1.mp4" type="audio/mp4"></video>
+     <hr>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1__RCXFl2fY?si=Lk1soZ_Hja99R_Jb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    </aside>
+    <section class="col-6 col-m-8"><iframe name="mycoffee" src="u0302coffee.html"></iframe></section>
+    <article class="col-4 col-m-12">
+        <h3>精品咖啡特價區       
+        </h3>
+        <hr>
+                    <picture>
+                <source srcset="images/arabica.png" media="(max-width:991px)">
+                <source srcset="images/robusta.png" media="(max-width:1199px)">
+                 <img src="images/bean3.png" id="bean" alt="咖啡好時光，喝完即亮光">
+            </picture>
+
+    </article>
+    </main>
+    <footer>2026年 || 翻拷必究</footer>
+</body>
+</html>

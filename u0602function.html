@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>函數的四種基本狀態</title>
+<style>
+
+    *{
+        box-sizing: border-box;
+    }
+div{
+/* background-color: rgb(231, 188, 131); */
+width: 200px;
+height: 200px;
+border-radius: 10%;
+display: inline-flex;
+justify-content: center;
+margin: 1.25rem;
+background-size: contain;
+border: 3px transparent solid;
+transition: transform 1.0s ease-in-out, border 1.0s ease-in-out;
+
+}
+
+div:hover{
+    border: 10px gold solid;
+    transform: scale(1.2);
+}
+/* 
+div:nth-of-type(1){
+  background-image: url(images/drink/1.jpg);
+
+}
+div:nth-of-type(2){
+  background-image: url(images/drink/2.jpg);
+
+}
+div:nth-of-type(3){
+  background-image: url(images/drink/3.jpg);
+
+}
+div:nth-of-type(4){
+  background-image: url(images/drink/4.jpg);
+
+} */
+
+span {
+    /* background-color: rgb(240, 210, 171); */
+    color: rgb(240, 236, 231);
+    border-radius: 25px;
+    padding: 0.8rem;
+}
+
+span:hover{
+    /* background-color: aquamarine; */
+    cursor: pointer;
+}
+
+p{
+    display: inline-flex;
+    width: 200px;
+    margin: 1.25rem;
+}
+
+</style>
+
+
+</head>
+<body onload="divbg()">
+<h1>函數的四種基本狀態</h1>
+
+    <div><span onclick="myfun()">無參數、無傳回值</span></div>
+    <div><span onclick="youfun('小丸子',10)">有參數、無傳回值</span></div>
+    <div><span onclick="document.querySelector('P:nth-of-type(3)').innerHTML=hisfun()">無參數、有傳回值</span></div>
+    <div><span onclick="document.querySelector('P:nth-of-type(4)').innerHTML=herfun('花輪',10)">有參數、有傳回值 </span></div>
+   <hr>
+
+   
+    <p></p> 
+     <p></p>
+      <p></p>
+      <p></p>
+
+      <script>
+function myfun(){
+    document.querySelector('p:nth-of-type(1)').innerHTML="美式咖啡，買一送一，跳樓大拍賣！";
+
+}
+
+function youfun(name,qty){
+    document.querySelector('p:nth-of-type(2)').innerHTML=`${name}，訂購了${qty}杯拿鐵！`;
+
+}
+
+function hisfun(name,qty){
+    return "Latte ，香醇可口 ";
+
+}
+
+
+function herfun(name,qty){
+    let price=120;
+    let total=price*qty;
+    let str=`${name}order${qty}杯咖啡，總計為${total}元`;
+    return str;
+    }
+
+function divbg(){
+    for  (let i=1;i<=4;i++){
+        document.querySelector('div:nth-of-type('+i+')').style.backgroundImage=`url(images/drink/${i}.jpg)`;
+    }
+}
+      </script>
+
+    </body>
+</html>

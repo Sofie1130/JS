@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="t" placeholder="溫度"><br>
+    <input type="number" id="h" placeholder="濕度"><br>
+    <button onclick="setData()">SetData</button>
+     <button onclick="getData()">GetData</button>
+      <button onclick="myClear()">CLEAR</button>
+      <div id="demo"></div>
+      <a href="u1102storage.html">現在的溫溼度</a>
+
+<script>
+    const t=document.getElementById('t');
+    const h=document.getElementById('h');
+
+    function setData(){
+    window.localStorage.setItem('t',t.value);
+    window.localStorage.setItem('h',h.value);
+    window.alert('local storage set OK!')
+    }
+
+    function getData(){
+    let t=window.localStorage.getItem('t');
+    let h=window.localStorage.getItem('h');
+    demo.innerHTML=`溫度：${t}<br>
+    濕度：${h}<br>`;
+    }
+
+ function myClear(){
+    window.localStorage.clear();
+    window.alert('資料已清除！');
+    }
+
+
+</script>
+
+
+</body>
+</html>

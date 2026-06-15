@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe Time</title>
+    <style> 
+        body{
+            background-color: #613030	;
+            color: azure;
+            margin: 0px;
+        }
+        header{
+            width: 100%;
+            height: 25vh;
+            /*background-color:#796400 ;*/
+            color:#9c5009;
+            background-image: url(images/coffee03.jpg);
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+        h1{ 
+           font-size: 5rem; 
+        }
+        main{
+            margin: 3rem;
+        }
+        footer{
+          bottom: 0px;
+          left: 0px;
+          position: fixed;
+          background-color: #616130;
+          color: 	#B3D9D9;
+          width: 100%;
+          text-align: center;
+                  }
+        p{
+        color: #D6D6AD;
+        }
+
+        h4{
+            background-color: rgb(204, 241, 229);
+            color: rgb(1, 51, 51);
+            width: 18%;
+            padding: 18px;
+            border-radius: 30px;
+            border: 1px rgb(242, 242, 245) solid;
+        }
+
+        #b1{
+            background-color: #616130;
+            color: aliceblue;
+        }
+
+        .myimg{
+            width: 10%;
+            border: 2px rgb(82, 36, 3) solid;
+            border-radius: 150px;
+            background-color: aliceblue;
+
+        }
+        h4:hover{
+            background-color: #613030;
+            color: aliceblue;
+            cursor: pointer;
+        }
+
+        P::before{
+            content: '☕ ';
+        }
+
+    </style>
+</head>
+<body>
+   
+<header onclick="alert('Hi 歡迎光臨喝咖啡聊是非時光')">
+       <h1>Welcome to Cafe Time</h1></header>
+<main>
+   <h3>咖啡的歷史起源</h3>
+    
+    <p style="color: rgb(139, 235, 163);">咖啡的來源已無從稽考。諸多傳說之一指咖啡原產於衣索比亞（Ethiopia）西南部的咖法省高原地區，據說是一位牧羊人發現羊吃了一種植物後，變得非常興奮活潑，因此發現了咖啡。</p>
+    
+
+    
+    <h3>咖啡樹的品種</h3>
+
+   <h4 id="b1">阿拉比卡咖啡 (Arabica coffee) </h4>
+   <p>原產於東非伊索比亞南部的阿比西 尼亞高原，現今沿海尚有野生種。</p> 
+   <img src="images/arabica.png" class="myimg">
+
+   <h4 id="b2">羅布斯塔咖啡 (Robusta coffee)</h4> 
+     <p>羅布斯塔咖啡屬於剛果咖啡的突變 種，原產於西非剛果，本種有缺乏香氣之 憾，苦味較強，酸味不足。</p>
+<img src="images/robusta.png">
+    <h4 id="b3">利比亞咖啡 (Liberia coffee)</h4>
+    <p>原產於西非利比亞，本種香味不佳， 苦味較強。除少數生產國自己消費外，只 有歐洲人飲用利比亞咖啡。</p>
+<img src="images/liberia.png">
+</main>
+<footer> 2026年 || 翻拷必究 </footer>
+
+</body>
+</html>

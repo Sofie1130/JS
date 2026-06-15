@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--提高SEO 的排名-->
+    <meta name="description" content="Cafe Time 咖啡時光 精品咖啡、甜點、舒適空間，是放鬆聚會的最佳咖啡館">
+    <meta name="keywords" content="咖啡館，精品咖啡、甜點、手作甜點、Cafe Time">
+    <title>Cafe Time 咖啡時光 | 精品咖啡。甜點。舒適空間</title>
+    <style>
+        
+        *{
+            box-sizing: border-box;
+        }
+
+        body{            
+            margin: 0px;
+        }
+
+        /* 導覽列*/
+        nav{
+            background-color: chocolate;
+        }
+
+        nav ul{
+            list-style-type: none;
+            margin: 0px;
+            display: inline-flex;
+        }
+
+        nav li{
+            padding: 1.2vw;
+        }
+
+        nav li:hover{
+            background-color: green;
+        }
+        
+        nav a{
+            color: lemonchiffon;
+            text-decoration: none;
+        }
+
+
+         header{
+            width: 100%;
+            height: 25vh;
+            background-image:url(images/coffee08.jpg);
+            background-size: cover;
+            display: flex;
+            justify-content: center; 
+            align-items: center;
+            cursor: pointer;   
+        }
+
+        h1{
+            font-size: 5em;
+            color: lemonchiffon;
+        }
+
+        aside ul{
+            list-style-type: none;
+            padding: 0px;
+        }
+
+        aside li{
+            margin: 8px;
+            padding: 8px;
+            border-bottom: burlywood 1px solid;
+        }
+
+        aside li:hover{
+            background-color: burlywood;
+        }
+
+        aside a{
+            text-decoration: none;
+            color:chocolate;
+        }
+
+        iframe{
+            width: 100%;
+            height: 45vh;
+            border: none;
+            overflow: auto;
+        }
+
+        img{
+            width: 100%;
+        }
+
+        /* cell phone */
+        /* 屬性選擇器 attribut selector ,使用[]*/
+        [class *='col-']{
+            width: 100%;
+            float: left;
+            padding: 1.5vw;
+        }
+
+
+        /*tablet*/
+        @media only screen and (min-width:992px){
+            .col-m-1{width: 8.33%;}
+            .col-m-2{width: 16.67%;}
+            .col-m-3{width: 25.00%;}
+            .col-m-4{width: 33.33%;}
+            .col-m-5{width: 41.67%;}
+            .col-m-6{width: 50.00%;}
+            .col-m-7{width: 58.33%;}
+            .col-m-8{width: 66.67%;}
+            .col-m-9{width: 75.00%;}
+            .col-m-10{width: 83.33%;}
+            .col-m-11{width: 91.67%;}
+            .col-m-12{width: 100.0%;}            
+        }
+
+        /*pc*/
+        @media only screen and (min-width:1200px){
+            .col-1{width: 8.33%;}
+            .col-2{width: 16.67%;}
+            .col-3{width: 25.00%;}
+            .col-4{width: 33.33%;}
+            .col-5{width: 41.67%;}
+            .col-6{width: 50.00%;}
+            .col-7{width: 58.33%;}
+            .col-8{width: 66.67%;}
+            .col-9{width: 75.00%;}
+            .col-10{width: 83.33%;}
+            .col-11{width: 91.67%;}
+            .col-12{width: 100.0%;}            
+        }
+
+
+        footer{
+            bottom: 0px;
+            left: 0px;
+            position: fixed;
+            background-color: beige;
+            color: #880000;
+            width: 100%;
+            text-align: center;
+        }
+      
+    </style>
+</head>
+<body>
+
+    <!--導覽列-->
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Service</a></li>
+            <li><a href="#">New Info</a></li>
+        </ul>
+    </nav>
+
+    <!--標頭區-->
+    <header>
+        <h1>Welcome to Cafe Time</h1>
+    </header>
+
+    <!--主要內容區-->
+    <main>        
+        <aside class="col-2 col-m-4">
+            <!--選單區-->
+            <ul>
+                <li><a href="u0302coffee.html" target="mycoffee">咖啡的歷史起源</a></li>
+                <li><a href="u0303coffee.html" target="mycoffee">咖啡樹的品種</a></li>
+                <li><a href="u0304coffee.html" target="mycoffee">咖啡的栽培條件</a></li>
+                <li><a href="u0305coffee.html" target="mycoffee">咖啡豆的成分</a></li>
+            </ul>
+            <!--音樂區-->
+            <audio controls=""  style="width: 100%;">
+                <source src="sounds/beethoven.mp3" type="audio/mpeg">
+            </audio>
+            <hr>
+            <!--影片區-->
+            <video controls="" style="width: 100%; border-radius: 8px;">
+                <source src="videos/coffee1.mp4" type="video/mp4">
+            </video>
+            
+        </aside>
+        <section class="col-6 col-m-8">
+            <iframe name="mycoffee" src="u0302coffee.html"></iframe>
+        </section>
+        <article class="col-4 col-m-12">
+            <h3>精品咖啡特價區</h3>
+            <hr>
+            <picture>
+                <source srcset="images/arabica.png" media="(max-width:991px)">
+                <source srcset="images/robusta.png" media="(max-width:1199px)">
+                 <img src="images/bean3.png" id="bean">
+            </picture>
+        </article>
+    </main>
+
+    <!--頁尾區-->
+    <footer>
+        2026 版權所有 | 翻拷必究
+    </footer>
+    
+</body>
+</html>

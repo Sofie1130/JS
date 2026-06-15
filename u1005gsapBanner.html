@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
+     <link href="https://codepen.io/GreenSock/pen/xxmzBrw/fcaef74061bb7a76e5263dfc076c363e.css" rel="stylesheet" type="text/css">
+    <title>Document</title>
+<style>
+       * { box-sizing: border-box; }
+
+        body { margin: 0; font-family: sans-serif;
+             display: flex; 
+            align-items: center;
+            justify-content: space-around;
+            /* min-height: 100vh; */
+            flex-direction: column; 
+        }
+
+    .banner {
+      width: 100%;
+      height: 20vh;
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(to right, #96031c, #cb0f38, #de178b);
+      color: white;
+      border: 2px solid #db9595;
+    }
+
+    .banner img {
+      position: absolute;
+      width: 80px;
+      height: 80px;
+      left: 20px;
+      top: 5px;
+      opacity: 1;
+    }
+
+    .text1, .text2 {
+      position: absolute;
+      left: 120px;
+      opacity: 0;
+      font-size: 22px;
+      white-space: nowrap;
+    }
+
+    .text1 {
+      top: 20px;
+    }
+
+    .text2 {
+      top: 50px;
+    }
+
+    .cta {
+      position: absolute;
+      right: 20px;
+      bottom: 20px;
+      padding: 8px 16px;
+      background-color: #ffcc00;
+      color: #000;
+      font-weight: bold;
+      border-radius: 4px;
+      opacity: 0;
+      cursor: pointer;
+    }
+
+    .cta:hover {
+      background-color: #ffd633;
+    }
+
+        .a{
+            background-image: url(images/arabica.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        
+        .b{
+            background-image: url(images/robusta.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        
+        .c{
+            background-image: url(images/liberia.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+</style>
+
+</head>
+<body>
+    
+<div class="banner">
+    <img src="images/cup5.png" class="p-img">
+    <div class="text1">全新產品登場</div>
+    <div class="text2">限時優惠，快來搶購</div>
+    <div class="cta">了解更多</div>
+</div>
+
+    <div class="box a"></div>
+    <div class="box b"></div>
+    <div class="box c"></div>
+
+
+<script>
+    let t= gsap.timeline({repeat:2,repeatDelay:1});
+    t.to(".p-img",{x: 10, duration:0.8,opacity:1.0,ease: "bounce.out" });
+    t.to(".text1",{x: 10, duration:1,opacity:1.0},"-=0.5");
+    t.to(".text2",{x: 10, duration:1,opacity:1.0},"-=0.6");
+    t.to(".cta",{x: 10, duration:1,opacity:1.0},"-=0.6");
+
+
+        gsap.to(".a", { rotation: 360, x: 100, duration: 5 });
+        gsap.from(".b", { rotation: -360, x: -100, duration: 5 });
+        gsap.fromTo(".c", {x:100},{rotation: 360, x:-100, duration: 5 });
+</script>
+
+
+</body>
+</html>
